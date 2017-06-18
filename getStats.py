@@ -31,3 +31,15 @@ with open("stopData") as f:
     stop_data = json.load(f)
 
 print("There are {} bus stops in Auckland".format(len(stop_data)))
+
+i=0
+for s in stop_data:
+    if len(s['stop_code']) != 4:
+        print()
+        print(s)
+        i+=1
+        print()
+        # print(s['stop_code'])
+    # if s['stop_code'] == '11779':
+        # print(s)
+print(i)
